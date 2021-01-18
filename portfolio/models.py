@@ -33,3 +33,11 @@ class Info(models.Model):
 class Projects(models.Model):
     """User's past projects and works"""
     project_name = models.TextField('Project Name', default="NOT SET")
+    project_info = models.TextField('Project Info', default="NOT SET")
+    date_created = models.TextField('Date', default="NOT SET")
+
+class ContactMe(models.Model):
+    """Received Contact Info from the web"""
+    email = models.TextField('Email', default="NOT SET")
+    subject = models.TextField('Subject', default="NOT SET")
+    message = models.TextField('Message', default="NOT SET")

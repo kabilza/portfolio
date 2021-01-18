@@ -9,15 +9,25 @@ a {
 }
 
 header, .full-width {
+    display: flex;
     width: 100%;
     background: lightgrey;
   }
-  .wrap {
-    width: 40%;
-    max-width: 90em;
-    margin: 0 20px;
-    padding: 20px 20px 20px 20px;
-  }
+.wrap {
+  width: 40%;
+  max-width: 90em;
+  margin: 0 20px;
+  padding: 20px 20px 20px 20px;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+img, .logo {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -44,7 +54,7 @@ header, .full-width {
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #4CAF50;
+    background-color: #6d8308;
     color: white;
   }
   
