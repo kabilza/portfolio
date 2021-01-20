@@ -36,8 +36,26 @@ class Projects(models.Model):
     project_info = models.TextField('Project Info', default="NOT SET")
     date_created = models.TextField('Date', default="NOT SET")
 
+    def get_project_name(self):
+        return f"{self.project_name}"
+
+    def get_project_info(self):
+        return f"{self.project_info}"
+
+    def get_project_date(self):
+        return f"{self.date_created}"
+
 class ContactMe(models.Model):
     """Received Contact Info from the web"""
     email = models.TextField('Email', default="NOT SET")
     subject = models.TextField('Subject', default="NOT SET")
     message = models.TextField('Message', default="NOT SET")
+
+    def get_email(self):
+        return f"{self.email}"
+    
+    def get_subject(self):
+        return f"{self.subject}"
+
+    def get_message(self):
+        return f"{self.message}"

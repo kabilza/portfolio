@@ -15,15 +15,20 @@
 
 <!-- Top navigation -->
 <div class="topnav">
-
-
   <!-- Left-aligned links (default) -->
-  <a href="#home" class="active">Home</a>
+  <a href="#home" class="active">About Me</a>
   <a href="#news">Projects</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  
-
+  <a href="#contact">Contact Me</a>
 </div>
+
+<div class="main-content">
+  {% if info %}
+    {% for object in info %}
+      <p> {{ object.get_brief_info }} </p>
+    {% endfor %}
+  {% endif %}
+</div>
+
+
 
 </html>
