@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
 
 h1 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 70px;
 }
 
 a {
     font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {background-color: coral;}
+
+
+.container-fluid {
+  padding-top: 70px;
+  padding-left: 35px;
 }
 
 p {
@@ -14,19 +23,21 @@ p {
 }
 
 .main-content {
-  float: left;
   width: 100%;
   background-color: lightgrey;
+  padding-top: 70px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 70px;
 }
 
 header, .full-width {
     display: flex;
     width: 100%;
-    background: lightgrey;
+    background:  grey;
   }
 .wrap {
   width: 40%;
-  max-width: 90em;
   margin: 0 20px;
   padding: 20px 20px 20px 20px;
   display:inline-block;
@@ -39,8 +50,6 @@ img, .logo {
   height: 350px;
   border-radius: 50%;
   object-fit: cover;
-  float: right;
-  padding: 20px 20px 20px 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,6 +61,11 @@ img, .logo {
     float: right;
     padding: 10px 20px 20px 10px;
 }
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  padding-bottom: 25px;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -61,13 +75,13 @@ img, .logo {
     display: list-item;
     justify-content: center;
     align-items: center;
-    top: 320px;
-    right: 75px;
+    top: 345px;
+    right: 155px;
     position: relative;
   }
 
   h1 {
-    font-family: 'Trebuchet MS', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 60px;
 }
 
@@ -75,7 +89,7 @@ header, .full-width {
   display: flex;
   width: 100%;
   height: 600px;
-  background: lightgrey;
+  background:grey;
 }
   .wrap {
   width: 40%;
