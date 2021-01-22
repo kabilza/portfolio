@@ -1,6 +1,7 @@
 {% load static %}
 <html>
 <body>
+  
 
   <head>
     <title>Brewster's Portfolio : Home</title>
@@ -32,7 +33,7 @@
     <h1>About Me</h1>
     {% if info %}
       {% for object in info %}
-        <p>                {{ object.get_brief_info }} </p>
+        <p id="main-info">   {{ object.get_brief_info }} </p>
       {% endfor %}
     {% endif %}
   </div>
