@@ -9,3 +9,9 @@ def home(request):
     info = Info.objects.all()
     context = {'info' : info}
     return render(request, 'portfolio/homepage.html', context)
+
+def projects(request):
+    """Render projects's page"""
+    projects = Projects.objects.all()
+    context = {'projects' : projects}
+    return render(request, 'portfolio/projects.html', context)

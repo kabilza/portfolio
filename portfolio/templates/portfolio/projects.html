@@ -3,7 +3,7 @@
 <body>
 
   <head>
-    <title>Brewster's Portfolio : Home</title>
+    <title>Brewster's Portfolio : Projects</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/homepage_style.css">
   </head>
@@ -22,19 +22,28 @@
   <!-- Top navigation -->
   <div class="topnav">
     <!-- Left-aligned links (default) -->
-    <a href="#home" class="active">About Me</a>
-    <a href="{% url 'portfolio:projects' %}">Projects</a>
+    <a href="{% url 'portfolio:home' %}">About Me</a>
+    <a href="#news" class="active">Projects</a>
     <a href="#contact">Contact Me</a>
   </div>
   
   <div class="main-content">
 
-    <h1>About Me</h1>
-    {% if info %}
-      {% for object in info %}
-        <p>                {{ object.get_brief_info }} </p>
+    <h1>My Projects</h1>
+    <div class="container-proj">
+    {% if projects %}
+      {% for object in projects %}
+      <div class="container-proj2">
+        <h2> Project Name </h2>
+        <p> {{ object.get_project_name }} </p>
+        <h2> Project Date </h2>
+        <p> {{ object.get_project_date }} </p>
+        <h2> Project Info </h2>
+        <p> {{ object.get_project_info }} </p>
+        </div>
       {% endfor %}
     {% endif %}
+    </div>
   </div>
   
 
