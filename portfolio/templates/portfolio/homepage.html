@@ -1,33 +1,43 @@
 {% load static %}
 <html>
+<body>
 
-<head>
-	<title>Brewster's Portfolio</title>
-	<link rel="stylesheet" href="../static/css/homepage_style.css">
-</head>
-
-<header>
-  <div class="wrap">
-    <h1>Welcome to Brewster's Portfolio Page</h1>
+  <head>
+    <title>Brewster's Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/homepage_style.css">
+  </head>
+  
+  
+  
+  <header style="background-image: url({% static 'image/cover2.jpg' %}); background-position: center center;">
+    <div class="container-fluid">
+        <h1>Welcome to Brewster's Portfolio Page</h1>
+    </div>
+    <div class="container">
+      <img class="logo" src="{% static 'image/me.jpg' %}" alt="My image">
+    </div>
+  </header>
+  
+  <!-- Top navigation -->
+  <div class="topnav">
+    <!-- Left-aligned links (default) -->
+    <a href="#home" class="active">About Me</a>
+    <a href="#news">Projects</a>
+    <a href="#contact">Contact Me</a>
   </div>
-    <img class="logo" src="{% static 'image/me.jpg' %}" alt="My image">
-</header>
+  
+  <div class="main-content">
 
-<!-- Top navigation -->
-<div class="topnav">
-  <!-- Left-aligned links (default) -->
-  <a href="#home" class="active">About Me</a>
-  <a href="#news">Projects</a>
-  <a href="#contact">Contact Me</a>
-</div>
-
-<div class="main-content">
-  {% if info %}
-    {% for object in info %}
-      <p> {{ object.get_brief_info }} </p>
-    {% endfor %}
-  {% endif %}
-</div>
+    <h1>About Me</h1>
+    {% if info %}
+      {% for object in info %}
+        <p>                {{ object.get_brief_info }} </p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
 
 
+</body>
 </html>
