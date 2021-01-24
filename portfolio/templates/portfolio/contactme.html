@@ -1,9 +1,15 @@
 {% load static %}
 <html>
 <body>
+  
+  <script>
+    function myFunction() {
+      alert("Contact Received! I will contact you back shortly! Thank you!");
+    }
+    </script>
 
   <head>
-    <title>Brewster's Portfolio : Projects</title>
+    <title>Brewster's Portfolio : Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../static/css/homepage_style.css">
   </head>
@@ -23,27 +29,20 @@
   <div class="topnav">
     <!-- Left-aligned links (default) -->
     <a href="{% url 'portfolio:home' %}">About Me</a>
-    <a href="{% url 'portfolio:projects' %}" class="active">Projects</a>
-    <a href="{% url 'portfolio:contactme' %}">Contact Me</a>
+    <a href="{% url 'portfolio:projects' %}">Projects</a>
+    <a href="{% url 'portfolio:contactme' %}"  class="active">Contact Me</a>
   </div>
   
   <div class="main-content">
 
-    <h1>My Projects</h1>
-    <div class="container-proj">
-    {% if projects %}
-      {% for object in projects %}
-      <div class="container-proj2">
-        <h2> Project Name </h2>
-        <p> {{ object.get_project_name }} </p>
-        <h2> Project Date </h2>
-        <p> {{ object.get_project_date }} </p>
-        <h2> Project Info </h2>
-        <p> {{ object.get_project_info }} </p>
-        </div>
-      {% endfor %}
+    <h1>Contact Me</h1>
+    {% if form %}
+    <form action = "" method = "post"> 
+        {% csrf_token %} 
+        <p id="main-info">   {{ form }} </p>
+        <input type="submit" value=Submit onclick="myFunction()"> 
+    </form> 
     {% endif %}
-    </div>
   </div>
   
 
